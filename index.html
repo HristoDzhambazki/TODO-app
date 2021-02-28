@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO-DO</title>
+
+    <link rel="icon" href="./assets/icons/icon-checklist.png">
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"
+        integrity="sha512-RNLkV3d+aLtfcpEyFG8jRbnWHxUqVZozacROI4J2F1sTaDqo1dPQYs01OMi1t1w9Y2FdbSCDSQ2ZVdAC8bzgAg=="
+        crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <div id="main">
+        <header>
+            <h2>TO-DO List</h2>
+        </header>
+        <div id="toDoBox">
+            <div id="addNewTaskDiv">
+                <form action="javascript:;">
+                    <input type="text" placeholder="Add your new task">
+                    <button>+</button>
+                </form>
+            </div>
+            <div id="currentTasks">
+            </div>
+            <div id="clearDiv">
+                <p id="pendingTasks">You have 0 pending tasks.</p>
+                <button id="clearAllBtn">Clear All</button>
+            </div>
+        </div>
+    </div>
+
+    <script id="newTask" type="text/x-handlebars-template">
+        {{#each tasks}}
+        <div class="task" id="{{id}}">
+            <div class="boxes">
+
+                {{#if isCompleted}}
+                <input type="checkbox" checked>
+                {{else}}
+                <input type="checkbox">
+                {{/if}}
+
+            </div>
+            <div class="taskText">
+
+                {{#if isCompleted}}
+                <p class="completedTask"> {{content}} </p>
+                <img src="./assets/icons/delete.png" alt="delete image">
+                {{else}}
+                <p> {{content}} </p>
+                {{/if}}
+
+            </div>
+        </div>
+        {{/each}}
+      </script>
+
+    <script src="./node_modules/handlebars/dist/handlebars.min.js"></script>
+    <script src="./assets/js/utils.js"></script>
+    <script src="./assets/js/ToDoService.js"></script>
+    <script src="./assets/js/ToDoController.js"></script>
+
+</body>
+
+</html>

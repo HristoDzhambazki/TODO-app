@@ -1,0 +1,138 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#main {
+    height: 560px;
+    background-image: linear-gradient(#63d9cf, #4e8ee4);
+    background-repeat: no-repeat;
+}
+
+#toDoBox {
+    box-sizing: border-box;
+    background-color: white;
+    border-radius: 2%;
+    box-shadow: 0 1px 6px 0 rgb(0, 0, 0);
+    margin: auto;
+    width: 350px;
+    height: 420px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    text-align: center;
+}
+
+header h2 {
+    display: inline-block;
+    text-align: center;
+    padding: 15px 10px;
+    margin-top: 24px;
+    padding-bottom: 15px;
+    border: 2px solid white;
+    border-radius: 5px;
+}
+
+#addNewTaskDiv {
+    padding-top: 10px;
+}
+
+#addNewTaskDiv form {
+    display: flex;
+    align-items: center;
+}
+
+#addNewTaskDiv button {
+    height: 39px;
+    width: 12%;
+    margin-left: 4px;
+    background-color: #8e49e7;
+    border: none;
+    box-shadow: none;
+    cursor: pointer;
+    color: white;
+    font-size: 35px;
+    line-height: 39px;
+    border-radius: 5px;
+}
+
+#addNewTaskDiv input {
+    height: 33px;
+    width: 80%;
+    font-size: 18px;
+    border: 2px solid #eeeeee;
+    padding-left: 15px;
+}
+
+#currentTasks {
+    margin-top: 15px;
+    height: 300px;
+    overflow: auto;
+}
+
+.task {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: -20px;
+}
+
+.task input[type="checkbox"] {
+    width: 22px;
+    height: 22px;
+}
+
+.taskText {
+    display: flex;
+    flex-grow: 1;
+    position: relative;
+}
+
+.taskText p {
+    background-color: #f2f2f2;
+    width: 260px;
+    padding: 14px 12px;
+    margin-left: 2px;
+    flex-grow: 1;
+    word-wrap: break-word;
+}
+
+.taskText img {
+    position: absolute;
+    left: 43%;
+    align-self: center;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    background-color: #f2f2f2;
+}
+
+#clearDiv {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    height: 48px;
+}
+
+#clearDiv p{
+    margin-bottom: 7px;
+}
+
+#clearDiv button {
+    width: 80px;
+    height: 30px;
+    background-color: #8e49e7;
+    border: none;
+    box-shadow: none;
+    cursor: pointer;
+    color: white;
+    font-size: 15px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.completedTask {
+    text-decoration: line-through;
+}
